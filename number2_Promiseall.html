@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="handleOnClick()">Click on me</button>
+    <div id="hasil" style="margin-top: 20px"></div>
+
+<script>
+
+const getUser = (id) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+        if (!id) {
+            reject(Error(`ID cannot equal to ${id}!`));
+        }
+
+        let response;
+        if (id > 10) {
+            response = {
+            success: false,
+            id: id,
+            message: "User Not Found!",
+            };
+        } else {
+            response = {
+            success: true,
+            id: id,
+            message: "User Found",
+            };
+            }
+            resolve(response);
+            }, 2000);
+        });
+      };
+
+const handleOnClick = () => {
+    console.log("Clicked...");
+    Promise.all([getUser(10)])
+        .then((response) => {
+        const dataUser = response[0];
+        console.log(dataUser);
+        })
+        .catch((err) => {
+        console.log(err);
+        });
+      };
+
+</script>
+</body>
+</html>
