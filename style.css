@@ -4,6 +4,17 @@ h1 {
 
 body h1,
 h3,
-h4 {
+h4,
+h5,
+div label {
+  text-align: center;
+}
+
+p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.middle {
   text-align: center;
 }
