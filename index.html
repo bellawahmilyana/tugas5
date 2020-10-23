@@ -13,30 +13,50 @@
 <body>
     <h1>Tugas-5</h1>
     <h3>Bella dan Barly</h3>
+    <br>
+    <h4>SOAL 1</h4>
     <div class="container">
+        <div class="d-flex justify-content-center">
+            <form>
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="firstName" class="form-control" id="firstName">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="lastName" class="form-control" id="lastName">
+                </div>
+                <input type="button" value="Submit" class="btn btn-dark" onclick="handleOnClick1()">
+                <!-- <button type="submit" class="btn btn-dark" onclick="handleOnClick1()">Submit</button> -->
+            </form>
+        </div> <br>
+        <h5 id="fullName">Full Name</h5>
+        <br>
+        <br>
+        <h4>SOAL 2</h4>
         <div class="d-flex justify-content-center ">
             <form>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">ID 1-9</label> <br>
-                    <input type="number" name="number" id="exampleFormControlSelect1">
+                    <input type="number" name="number" id="exampleFormControlSelect1" placeholder="ID Number">
                 </div>
                 <input type="button" value="Get User" onclick="handleOnClick()" id="userID" class="btn btn-dark">
             </form>
         </div>
-        <h4 id="hasilType">
+        <h5 id="hasilType">
             status
-        </h4>
-        <h4 id="hasilID">
+        </h5>
+        <h5 id="hasilID">
             ID
-        </h4>
-        <h4 id="hasilMessage">
+        </h5>
+        <h5 id="hasilMessage">
             message
-        </h4>
+        </h5>
     </div>
 
 
 
-    <script src="./newScript.js"></script>
+    <script src="./scriptBellaBarly.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
